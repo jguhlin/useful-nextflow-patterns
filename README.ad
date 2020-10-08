@@ -1,0 +1,10 @@
+:toc:
+:toc-placement!:
+
+= Useful Nextflow Patterns
+
+toc::[]
+
+== 01 Cartesian Product with a Map
+
+link:./01_cartesian_product_and_map/cartesian_product_and_map.nf[View here]
