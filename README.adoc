@@ -3,6 +3,7 @@
 
 = Useful Nextflow Patterns
 
+
 toc::[]
 
 == 01 Cartesian Product with a Map
