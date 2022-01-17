@@ -15,19 +15,19 @@ process map_reads {
   cpus 16
 
   """
-    bwa-mem2 mem \
+    bwa mem \
       -o ${id}.sam \
       -t 16 \
-      -R '@RG\tID:${id}_pair\tSM:${id}' \
+      -R '@RG\\tID:${id}_pair\\tSM:${id}' \
       /mnt/data/stonefly/assembly.fna \
       ${files[0]} ${files[1]}
 
     samtools sort ${id}.sam -l 1 -o ${id}.sorted.bam -O bam
 
-    bwa-mem2 mem \
+    bwa mem \
       -o ${id}_singles.sam \
       -t 16 \
-      -R '@RG\tID:${id}_single\tSM:${id}' \
+      -R '@RG\\tID:${id}_single\\tSM:${id}' \
       /mnt/data/stonefly/assembly.fna \
       ${files[2]}
    
