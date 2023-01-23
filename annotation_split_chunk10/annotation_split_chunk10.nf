@@ -9,6 +9,7 @@ process annotateGenomesChunked {
     output:
         file "annotations/*.gff" into annotations
     // Uncomment and set for SLURM scripts
+    // executor: 'slurm'
     // cpus: 10 // See: https://www.nextflow.io/docs/latest/process.html#cpus
     // memory: '10GB' // See: https://www.nextflow.io/docs/latest/process.html#memory
     // time: '6h' // See: https://www.nextflow.io/docs/latest/process.html#time
