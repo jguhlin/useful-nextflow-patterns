@@ -4,6 +4,8 @@ genomes_channel = channel.fromPath("genomes/*.fasta")
 chunked_channel = genomes_channel.collate(10)
 
 process annotateGenomesChunked {
+    cache true
+    publishDir 'computed_annotations'
     input:
         file fastas from chunked_channel
     output:
@@ -26,4 +28,4 @@ process annotateGenomesChunked {
 
 
     """
-}
+}\
